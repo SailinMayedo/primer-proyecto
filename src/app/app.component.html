@@ -1,2 +1,8 @@
+<p *ngIf="name">el nombre es:{{name}} </p>
+<input type="text" [(ngModel)]="name">
 
-<h1>{{title}}</h1>
+
+<ul *ngFor="let city of cities">
+    <li [ngStyle]="{'color': 'white', 'background-color': city ==='madrid' ? 'blue': 'green'}">{{city}}</li>
+   <!--li [ngClass]="{'selected':city=== 'lima' }"> {{city}}</li!-->
+ </ul>
